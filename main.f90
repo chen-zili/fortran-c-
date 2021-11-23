@@ -4,5 +4,5 @@ program main
 
     n = 10
     
-    Call temp(n)
+    Call temp2(n)
 end
