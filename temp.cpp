@@ -1,8 +1,9 @@
+#include <iostream>
 #include "temp.hpp"
 
 using namespace std;
 
-int temp(int n)
+int temp_(int n)
 {
     cout << "!" << endl;
     cout << n << endl;

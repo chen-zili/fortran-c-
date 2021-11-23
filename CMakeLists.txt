@@ -6,21 +6,16 @@ project(fortran-cpp)
 
 # 启用对Fortran语言的支持
 enable_language(Fortran C CXX)
+set(CMAKE_CXX_STANDARD 11)
 
 # add_compile_options(-fPIC)
 
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "set build type to debug")
 
 # 设置源文件和头文件路径
-# file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/*.f90 ${PROJECT_SOURCE_DIR}/*.cpp)
-include_directories(${PROJECT_SOURCE_DIR}/cppShared/)
-
-file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/*.f90 tem2.c)
+include_directories(${PROJECT_SOURCE_DIR}/)
+file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/*.f90 ${PROJECT_SOURCE_DIR}/*.cpp)
 
 # 添加源文件
 add_executable(${PROJECT_NAME} ${SRCS})
 
-add_subdirectory(cppShared)
-
-# 链接
-target_link_libraries(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/cppShared/lib/libcppShared.so)
