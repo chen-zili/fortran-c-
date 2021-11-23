@@ -3,10 +3,9 @@
 
 using namespace std;
 
-int temp_(int n)
+int temp_(int *nptr)
 {
-    cout << "!" << endl;
-    cout << n << endl;
-
+    cout << "!c++" << endl;
+    cout << *nptr << endl;
     return 0;
 }
