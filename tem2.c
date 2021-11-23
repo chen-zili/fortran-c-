@@ -1,9 +1,11 @@
 #include "stdio.h"
 
-int temp2_(int * nptr)
+#include "temp.hpp"
+
+int temp_(int * nptr)
 {
+    temp(*nptr);
     printf("2!\n");
-    printf("%d\n", *nptr);
 
     return 0;
 }
