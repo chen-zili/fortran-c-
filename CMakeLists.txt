@@ -23,4 +23,4 @@ add_executable(${PROJECT_NAME} ${SRCS})
 add_subdirectory(cppShared)
 
 # 链接
-target_link_libraries(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/cppShared/lib/libcppShared.so)
+target_link_libraries(${PROJECT_NAME} cppShared)
