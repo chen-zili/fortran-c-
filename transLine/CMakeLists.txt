@@ -25,5 +25,5 @@ add_library(transLine SHARED ${SRCS})
 
 # 链接库
 target_link_libraries(transLine ${PROJECTPATH}/petsc/lib/libpetsc.so)
-target_link_libraries(transLine ${PROJECTPATH}/fmt/lib/libfmt.so)
+target_link_libraries(transLine ${PROJECTPATH}/fmt/lib/libfmt.so.8)
 target_link_libraries(transLine /opt/intel/oneapi/mpi/2021.3.0/lib/release/libmpi.so.12)

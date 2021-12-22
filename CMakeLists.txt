@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(fortran-cpp)
 
 # 启用对Fortran语言的支持
-enable_language(Fortran C CXX)
+enable_language(Fortran C)
 
 # 设置全局路径
 set (PROJECTPATH ${PROJECT_SOURCE_DIR})

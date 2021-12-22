@@ -1,6 +1,7 @@
 #ifndef _SOLVE_H_
 #define _SOLVE_H_
 
+#include <iostream>
 #include <ctime>
 
 #include <petscdm.h>
