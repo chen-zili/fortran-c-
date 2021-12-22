@@ -1,0 +1,11 @@
+prefix=/home/chenzili/workSpace/repertoty/fmt/release
+exec_prefix=/home/chenzili/workSpace/repertoty/fmt/release
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 8.0.1
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

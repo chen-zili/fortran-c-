@@ -1,0 +1,8 @@
+Running check examples to verify correct installation
+Using PETSC_DIR=/home/chenzili/petsc and PETSC_ARCH=arch-ci-linux-intel-mkl-single
+C/C++ example src/snes/tutorials/ex19 run successfully with 1 MPI process
+C/C++ example src/snes/tutorials/ex19 run successfully with 2 MPI processes
+Possible error running Fortran example src/snes/tutorials/ex5f with 1 MPI process
+See http://www.mcs.anl.gov/petsc/documentation/faq.html
+Number of SNES iterations =     3
+Completed test examples

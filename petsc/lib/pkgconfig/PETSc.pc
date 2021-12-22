@@ -1,0 +1,19 @@
+prefix=/home/chenzili/petsc/arch-ci-linux-intel-mkl-single
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${prefix}/lib
+ccompiler=mpiicc
+cflags_extra=-fPIC -wd1572 -Wno-unknown-pragmas -g -O
+cflags_dep=-MMD -MP
+ldflag_rpath=-Wl,-rpath,
+cxxcompiler=mpiicpc
+cxxflags_extra=-wd1572 -g -O  -fPIC -std=c++17
+fcompiler=mpiifort
+fflags_extra=-fPIC -g -O
+
+Name: PETSc
+Description: Library to solve ODEs and algebraic equations
+Version: 3.16.1
+Cflags:   -I${includedir} -I/home/chenzili/petsc/include
+Libs: -L${libdir} -lpetsc
+Libs.private: -L/opt/intel/oneapi/mkl/2021.3.0/lib/intel64 -L/opt/intel/oneapi/mpi/2021.3.0/lib/release -L/opt/intel/oneapi/mpi/2021.3.0/lib -L/opt/intel/oneapi/vpl/2021.4.0/lib -L/opt/intel/oneapi/tbb/2021.3.0/lib/intel64/gcc4.8 -L/opt/intel/oneapi/mpi/2021.3.0/libfabric/lib -L/opt/intel/oneapi/ipp/2021.3.0/lib/intel64 -L/opt/intel/oneapi/ippcp/2021.3.0/lib/intel64 -L/opt/intel/oneapi/dnnl/2021.3.0/cpu_dpcpp_gpu_dpcpp/lib -L/opt/intel/oneapi/dal/2021.3.0/lib/intel64 -L/opt/intel/oneapi/compiler/2021.3.0/linux/compiler/lib/intel64_lin -L/opt/intel/oneapi/compiler/2021.3.0/linux/lib -L/opt/intel/oneapi/clck/2021.3.0/lib/intel64 -L/opt/intel/oneapi/ccl/2021.3.0/lib/cpu_gpu_dpcpp -L/usr/lib/gcc/x86_64-linux-gnu/9 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lmkl_blacs_intelmpi_lp64 -liomp5 -ldl -lpthread -lX11 -lstdc++ -ldl -lmpifort -lmpi -lrt -lpthread -lifport -lifcoremt_pic -limf -lsvml -lm -lipgo -lirc -lgcc_s -lirc_s -lquadmath -lstdc++ -ldl
